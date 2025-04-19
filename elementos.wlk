@@ -4,6 +4,9 @@ object castillo {
     method alturaEnMetros() {
         return 20
     }
+    method recibirAtaque(unaPotencia) {
+        defensaActual = defensaActual - unaPotencia
+    }
     method defensa() {
         return defensaActual
     }
@@ -17,11 +20,18 @@ object aurora {
     method alturaEnMetros() {
         return 1
     }
+    method recibirAtaque(unaPotencia) {
+        if (unaPotencia >= 10) {
+            estadoActual = false
+        }
+    }
 }
 
 object tipa {
     var alturaEnMetrosActual = 8
     method alturaEnMetros() {
         return alturaEnMetrosActual
+    }
+    method recibirAtaque(unaPotencia) {
     }
 }
