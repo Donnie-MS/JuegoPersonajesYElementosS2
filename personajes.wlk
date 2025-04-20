@@ -1,5 +1,11 @@
 object luisa {
-    var personajeActual = floki
+    var personajeActivo = null
+    method aparece(unElemento) {
+        personajeActivo.encontrar(unElemento)
+    }
+    method asignarPersonaje(unPersonaje) {
+        personajeActivo = unPersonaje
+    }
 }
 
 //Personajes
