@@ -37,7 +37,9 @@ object ballesta {
         flechasActuales = 10
     }
     method registrarUso() {
-        flechasActuales = flechasActuales - 1
+        if(self.estaCargada()) {
+            flechasActuales= flechasActuales - 1
+        }
     }
     method flechas() {
         return flechasActuales 
@@ -59,6 +61,19 @@ object jabalina {
     }
     method potencia() {
         return 30
+    }
+    method estaCargada() {
+        if (flechasActuales > 0) {
+            return true
+        }
+    }
+    method flechas() {
+        return flechasActuales 
+    }
+    method registrarUso () {
+        if (self.estaCargada()) {
+            flechasActuales = flechasActuales - 1
+        }
     }
 }
 
