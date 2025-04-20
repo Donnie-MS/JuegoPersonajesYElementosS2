@@ -30,11 +30,18 @@ armaActual.registrarUso()
 
 object mario {
     var valorRecolectadoActual = 0
+    var ultimoElemEncontrado = null
+    method esFeliz() {
+        if (valorRecolectadoActual >= 50
+            or unElemento.altura() >= 10) {
+            
+        }
     method clase() {
         return trabajador
     }
     method encontrar(unElemento) {
-        if
+        ultimoElemEncontrado= unElemento
+        if()
     }
     method cambiarValorRecolectado(unValor) {
         valorRecolectadoActual = unValor
