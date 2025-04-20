@@ -29,12 +29,15 @@ armaActual.registrarUso()
 }
 
 object mario {
-    var valorRecolectado = 0
+    var valorRecolectadoActual = 0
     method clase() {
         return trabajador
     }
     method encontrar(unElemento) {
-        
+        if
+    }
+    method cambiarValorRecolectado(unValor) {
+        valorRecolectadoActual = unValor
     }
 }
 //armas
