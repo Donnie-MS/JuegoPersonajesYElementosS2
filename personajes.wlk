@@ -29,6 +29,7 @@ armaActual.registrarUso()
 }
 
 object mario {
+    var valorRecolectado = 0
     method clase() {
         return trabajador
     }
