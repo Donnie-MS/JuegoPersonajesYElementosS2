@@ -17,6 +17,7 @@ object floki {
     method encontrar(unElemento) {
         if (self.arma().estaCargada()) {
             unElemento.recibirAtaque(self.arma().potencia())
+ballesta.usarArma()
         }
     }
 }
@@ -33,7 +34,13 @@ object mario {
 object ballesta {
     var flechasActuales = 10
     method recargarArma() {
-        estadoDeCargaActual = true
+        flechasActuales = 10
+    }
+    method usarArma() {
+        flechasActuales = flechasActuales - 1
+    }
+    method flechas() {
+        return flechasActuales 
     }
     method estaCargada() {
         if (flechasActuales > 0) {
