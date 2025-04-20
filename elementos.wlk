@@ -10,6 +10,9 @@ object castillo {
     method defensa() {
         return defensaActual
     }
+   method cambiarDefensaA(unNumero) {
+        defensaActual = un número 
+   }
 }
 
 object aurora {
