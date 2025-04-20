@@ -31,12 +31,14 @@ object mario {
 }
 //armas
 object ballesta {
-    var estadoDeCargaActual = true
+    var flechasActuales = 10
     method recargarArma() {
         estadoDeCargaActual = true
     }
     method estaCargada() {
-        return estadoDeCargaActual
+        if (flechasActuales > 0) {
+            return true
+        }
     }
     method potencia() {
         return 4
