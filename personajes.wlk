@@ -53,7 +53,13 @@ object ballesta {
 }
 
 object jabalina {
-
+    var flechasActuales = 1
+    method recargarArma() {
+        flechasActuales = 1
+    }
+    method potencia() {
+        return 30
+    }
 }
 
 // Clases
