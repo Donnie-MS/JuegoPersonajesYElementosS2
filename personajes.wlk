@@ -17,7 +17,7 @@ object floki {
     method encontrar(unElemento) {
         if (self.arma().estaCargada()) {
             unElemento.recibirAtaque(self.arma().potencia())
-ballesta.usarArma()
+armaActual.registrarUso()
         }
     }
 }
@@ -36,7 +36,7 @@ object ballesta {
     method recargarArma() {
         flechasActuales = 10
     }
-    method usarArma() {
+    method registrarUso() {
         flechasActuales = flechasActuales - 1
     }
     method flechas() {
