@@ -10,9 +10,15 @@ object castillo {
     method defensa() {
         return defensaActual
     }
-   method cambiarDefensaA(unNumero) {
-        defensaActual = un número 
-   }
+    method otorgarValor() {
+        return defensaActual * 0.2
+    }
+    method recibirTrabajo() {
+        defensaActual = defensaActual + 20
+        if (defensaActual > 200) {
+        defensaActual = 200
+        }
+    }
 }
 
 object aurora {
@@ -28,6 +34,11 @@ object aurora {
             estadoActual = false
         }
     }
+    method recibirTrabajo() {
+    }
+    method otorgarValor() {
+        return 15
+    }
 }
 
 object tipa {
@@ -35,6 +46,10 @@ object tipa {
     method alturaEnMetros() {
         return alturaEnMetrosActual
     }
+
     method recibirAtaque(unaPotencia) {
+    }
+    method otorgarValor() {
+        return self.alturaEnMetros() * 2
     }
 }

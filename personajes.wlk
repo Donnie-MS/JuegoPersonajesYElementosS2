@@ -1,4 +1,7 @@
-object luisa {
+import elementos.*
+
+
+object luisa{
     var personajeActivo = null
     method aparece(unElemento) {
         personajeActivo.encontrar(unElemento)
@@ -9,7 +12,7 @@ object luisa {
 }
 
 //Personajes
-object floki {
+object floki{
     var armaActual = ballesta
     method arma() {
         return armaActual
@@ -33,14 +36,21 @@ object mario {
     var ultimoElemEncontrado = null
     method esFeliz() {
         return valorRecolectadoActual >= 50
-            or unElemento.altura() >= 10
+            or ultimoElemEncontrado.altura() >= 10
+    }
+    method recibirValor(unElemento) {
+        valorRecolectadoActual = valorRecolectadoActual + unElemento.otorgarValor()
     }
     method clase() {
         return trabajador
     }
+    method trabajarEn(unElemento) {
+        unElemento.recibirTrabajo()
+    }
     method encontrar(unElemento) {
         ultimoElemEncontrado= unElemento
-        if()
+        self.recibirValor(unElemento)
+        self.trabajarEn(unElemento)
     }
     method cambiarValorRecolectado(unValor) {
         valorRecolectadoActual = unValor
@@ -61,9 +71,7 @@ object ballesta {
         return flechasActuales 
     }
     method estaCargada() {
-        if (flechasActuales > 0) {
-            return true
-        }
+        return flechasActuales > 0
     }
     method potencia() {
         return 4
@@ -79,9 +87,7 @@ object jabalina {
         return 30
     }
     method estaCargada() {
-        if (flechasActuales > 0) {
-            return true
-        }
+        return flechasActuales > 0
     }
     method flechas() {
         return flechasActuales 
@@ -101,11 +107,3 @@ object guerrero {
 object trabajador {
   
 }
-
-/*
-    method encontrar(elemento) {
-        if (arma.estaCarga()) {
-            elemento.recibirAtaque(arma.potenciaDeAtaque())
-            arma.registrarUso()
-        }
-*/
